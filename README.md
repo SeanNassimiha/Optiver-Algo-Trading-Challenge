@@ -1,4 +1,4 @@
-# Optiver-Challenge-Market-Making-Algo
+# Optiver Algo-Trading Challenge
 Submission for the Optiver Challenge as part of the Hex Cambridge Hackathon in January 2021
 
 This is the repo for the algorithm created as part of the Optiver challenge.
