@@ -53,9 +53,12 @@ def initB():
     If either of these cannot be found (currently no bids/asks on the market),
     we repeat until an initial start price is found. This is used to find
     an initial entry point into the market.
-    Returns:
-        initial_bid_B (float) = Initial bid price for `PHILIPS_B`
-        initial_ask_B (float) = Initial ask price for `PHILIPS_B`
+
+    Returns
+    -------
+    initial_bid_B, initial_ask_B : float, float 
+        initial_bid_B = Initial bid price for `PHILIPS_B`
+        initial_ask_B = Initial ask price for `PHILIPS_B`
     '''
     success = False
     while success == False:
@@ -94,9 +97,13 @@ def mainLoop(t):
     Runs all price checks, attempts to run our Delta-Neutral algorithm to make
     small profits based on the difference in liquidity between our two instruments.
     
-    Args:
-        t (int) = Time step (increases with iterations)
-    Returns:
+    Parameters
+    -----------
+    t : int
+        Current time step (increases with iterations)
+        
+    Returns
+    ---------
         None
     """
     
@@ -322,13 +329,19 @@ def runLoop(algo,max_steps=None):
 
 def main(sell_all=False):
     """
-    Main function
-    Args:
-        sell_all (bool) = If set to true, sells all and doesn't run any loop.
-                            Only to be used in case of emergency, closing all positions will close
-                            at any possible price, can result in drastic losses if there are mean 
-                            opportunists in the market.
-    Returns:
+    Main function. Starts by removing outstanding orders from previous runs of 
+    the bot runs, before starting our main loop.
+    
+    Parameters
+    ----------
+    sell_all : bool 
+        If set to true, sells all and doesn't run any loop.
+            Only to be used in case of emergency, closing all positions will close
+            at any possible price, can result in drastic losses if there are mean 
+            opportunists in the market.
+    
+    Returns
+    --------
         None
     """
     
