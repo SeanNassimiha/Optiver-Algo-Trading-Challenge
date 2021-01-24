@@ -4,6 +4,11 @@
              | V | |--| |  | --- |    |--| |  |            
              |   | |  | |  /     |    |  | |  /            
              '   ' '  ' `-'      `--' '  ' `-'             
+# The Challenge
+
+This is the submission for the Optiver Challenge of the Hex Cambridge hackathon in January 2021. 
+We have developed an automated strategy for dual-listing of a fictional stock "Philips" A and B,
+which is traded on two - differently liquid - exchanges.
 
 # Market Arbitrage Dual-Listing Algorithmic Delta (Neutral) 
 
